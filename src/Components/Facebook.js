@@ -39,7 +39,10 @@ class Facebook extends Component {
           }}
         >
           <img src={this.state.picture} alt={this.state.name} />
-          <h2>Welcome {this.state.name}</h2>
+          <h3>
+            Welcome <br />
+            {this.state.name}
+          </h3>
           Email: {this.state.email}
         </div>
       );
