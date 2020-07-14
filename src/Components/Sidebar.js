@@ -1,23 +1,27 @@
 import React from "react";
 import { slide as Menu } from "react-burger-menu";
+import Home from "./Translate/Home";
+import About from "./Translate/About";
+import Services from "./Translate/Services";
+import ContactUs from "./Translate/ContactUs";
 
 export default (props) => {
   return (
     <Menu {...props}>
       <a className='menu-item' href='/'>
-        Home
+        <Home />
       </a>
 
       <a className='menu-item' href='/about'>
-        About
+        <About />
       </a>
 
       <a className='menu-item' href='/services'>
-        Services
+        <Services />
       </a>
 
       <a className='menu-item' href='/contact'>
-        Contact us
+        <ContactUs />
       </a>
     </Menu>
   );
