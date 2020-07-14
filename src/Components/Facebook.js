@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import FacebookLogin from "react-facebook-login";
 
+import Welcome from "./Translate/welcome";
+import Email from "./Translate/Email";
+import FbButton from "./Translate/FbButton";
+
 class Facebook extends Component {
   state = {
     isLoggedIn: false,
@@ -40,15 +44,17 @@ class Facebook extends Component {
         >
           <img src={this.state.picture} alt={this.state.name} />
           <h3>
-            Welcome <br />
+            <Welcome />
+            <br />
             {this.state.name}
           </h3>
-          Email: {this.state.email}
+          <Email /> {this.state.email}
         </div>
       );
     } else {
       fbContent = (
         <FacebookLogin
+          textButton={<FbButton />}
           appId='388024745493898'
           autoLoad={true}
           fields='name,email,picture'
